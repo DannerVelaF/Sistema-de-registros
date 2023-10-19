@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Press+Start+2P&family=Roboto:ital,wght@0,400;1,300&family=Source+Code+Pro&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Color_principal: #c07f00;
+  --Color_secundario: #000000;
+  --fuente_principal: "Roboto", monospace;
+  --border-radius: 10px;
+}
+
+/************************ Login ***********************/
+/*****************************************************/
+
+body {
+  font-family: var(--fuente_principal);
+  height: 100%;
+}
+
+a {
+  color: var(--Color_secundario);
+  text-decoration: none;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.izquierda {
+  background-image: url(/imgs/Logo-colegio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.izquierda .logo {
+  height: 100%;
+}
+
+.derecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 500px;
+}
+
+.formulario h1 {
+  position: relative;
+  left: -120px;
+  font-weight: 800;
+}
+
+.formulario .credencial {
+  position: relative;
+  margin: 30px 0;
+  font-size: 20px;
+}
+.credencial input {
+  width: 500px;
+  padding: 0 6px;
+  height: 60px;
+  border-radius: var(--border-radius);
+  border: 3px var(--Color_principal) solid;
+  outline: none;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.credencial label {
+  position: absolute;
+  top: 30%;
+  left: 30px;
+  pointer-events: none;
+  background: #fff;
+
+  transition: 0.5s;
+}
+
+.formulario .ingresar {
+  background-color: var(--Color_principal);
+  width: 400px;
+  height: 60px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: var(--border-radius);
+  border: 1px var(--Color_secundario) solid;
+  cursor: pointer;
+}
+
+.credencial input:valid ~ label,
+.credencial input:focus ~ label {
+  top: -13px;
+  font-weight: bold;
+}
+
+.formulario .ingresar:hover {
+  background-color: var(--Color_secundario);
+}
+
+/************************ Login ***********************/
+/*****************************************************/
+
+/************************ Inicio ***********************/
+/*****************************************************/
+
+.navbar {
+  background-color: var(--Color_secundario);
+  color: #fff;
+}
+
+.navbar .navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 25px 25px 25px;
+}
+
+.navbar-list li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list li img {
+  width: 70px;
+}
+
+/************************ Inicio ***********************/
+/*****************************************************/
+
+/************************ Dashboard  ***********************/
+/*****************************************************/
+
+.dashboard-section {
+  background-color: var(--Color_principal);
+  height: 881px;
+  width: 15%;
+}
+
+.opciones {
+  position: relative;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opcion {
+  background-color: rgb(248, 238, 238);
+  border-radius: var(--border-radius);
+  width: 95%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.opcion:hover {
+  background-color: #ada89d;
+}
+
+.opcion h1 {
+  padding: 20px;
+}
+
+main {
+  display: flex;
+}
+
+.principal {
+  height: 881px;
+  width: calc(100% - 20%);
+  display: grid;
+  place-content: center;
+}
