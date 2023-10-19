@@ -25,11 +25,6 @@ main {
   display: flex;
 }
 
-.container {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
 .izquierda {
   background-image: url(/imgs/Logo-colegio.jpg);
   background-size: cover;
@@ -180,11 +175,27 @@ main {
 /*****************************************************/
 
 .principal {
-  height: 881px;
-  width: calc(100% - 20%);
-  display: grid;
-  place-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /************************ Principal  ***********************/
 /*****************************************************/
+
+.contenedor {
+  background: var(--Color_principal);
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contenedor h1 {
+  font-size: 50px;
+  font-weight: bold;
+  padding: 30px;
+}

@@ -2,7 +2,7 @@ function cargarContenido(page) {
   fetch(page)
     .then((res) => res.text())
     .then((data) => {
-      document.getElementById("contenedor").innerHTML = data;
+      document.getElementById("principal").innerHTML = data;
     })
     .catch((err) => {
       console.err(err);
