@@ -21,9 +21,8 @@ body {
   height: 100%;
 }
 
-a {
-  color: var(--Color_secundario);
-  text-decoration: none;
+main {
+  display: flex;
 }
 
 .container {
@@ -174,10 +173,11 @@ a {
 .opcion h1 {
   padding: 20px;
 }
+/************************ Dashboard  ***********************/
+/*****************************************************/
 
-main {
-  display: flex;
-}
+/************************ Principal  ***********************/
+/*****************************************************/
 
 .principal {
   height: 881px;
@@ -185,3 +185,6 @@ main {
   display: grid;
   place-content: center;
 }
+
+/************************ Principal  ***********************/
+/*****************************************************/
