@@ -31,3 +31,8 @@ document.getElementById("perfil").addEventListener("click", (evt) => {
   evt.preventDefault();
   cargarContenido("/pages/perfil.html");
 });
+
+document.getElementById("cerrar_sesion").addEventListener("click", (evt) => {
+  evt.preventDefault();
+  window.history.back();
+});

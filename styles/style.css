@@ -25,14 +25,18 @@ main {
   display: flex;
 }
 
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
 .izquierda {
   background-image: url(/imgs/Logo-colegio.jpg);
+  background-color: gray;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-.izquierda .logo {
-  height: 100%;
 }
 
 .derecha {
@@ -192,6 +196,8 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  border-radius: var(--border-radius);
+  border: 2px var(--Color_secundario) solid;
 }
 
 .contenedor h1 {
