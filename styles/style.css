@@ -198,9 +198,84 @@ main {
 }
 
 .contenedor h1 {
-  font-size: 50px;
+  font-size: 80px;
   font-weight: bold;
   padding: 30px;
 }
 /************************ Principal  ***********************/
+/*****************************************************/
+
+/************************ Inscripciones  ***********************/
+/*****************************************************/
+
+.registro-form{
+  margin: 20px;
+}
+
+.Inscripción-estudiante {
+    width: 881px;
+    background: #D9D9D9;
+    width: 881px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.Encabezado {
+  background-color: var(--Color_principal);
+  padding: 10px;
+  color: white;
+}
+
+.Inscripción-estudiante label {
+    display: inline-block; 
+    width: 200px; 
+    margin-top: 10px;
+}
+
+.Inscripción-estudiante input {
+    width: 680px; 
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: var(--border-radius);
+}
+
+.Inscripción-estudiante button {
+    background: #c07f00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e69500;
+}
+
+.datos {
+  display: flex;
+}
+
+.inscripcion {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.registrar-button {
+  margin: 50px;
+  background: var(--Color_principal);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: var(--border-radius); 
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+
+/************************ Inscripciones  ***********************/
 /*****************************************************/
