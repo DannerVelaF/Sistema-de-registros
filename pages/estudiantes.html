@@ -1,11 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Rellenar Estudiantes</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .thead {
+      background-color: var(--Color_principal);
+      color: var(--Color_secundario);
+      font-weight: bold;
+    }
+
+    .th {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .td {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: left;
+    }
+
+    .tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+
+    /* estilos de h1 */
+    .title_student {
+      text-align: center;
+      color: var(--Color_principal);
+      font-size: 50px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /*hacemos que el titulo se vea mas grande y con negrita y este centrado arriba de la tabla*/
+    .title_student {
+      text-align: center;
+      color: var(--Color_principal);
+      font-size: 50px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .table_student {
+      width: 881px;
+      background: #D9D9D9;
+      width: 881px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .button_student {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <h1>Agregar estudiantes</h1> -->
+  <!-- Lo agregamos como titulo de la pagina estudiantes-->
+
+  <<!-- div class="registro-form table_stu">
+    <div class="Encabezado">
+      <h1>Estudiantes</h1>
+      <div class="button_student">
+        <button class="agregar-estudiante">Agregar Estudiante</button>
+      </div>
+    </div>
+    <section>
+      <table class="table_student">
+        <thead class="thead">
+          <tr>
+            <th class="th">DNI</th>
+            <th class="th">Nombre</th>
+            <th class="th">Cursos</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr>
+            <td class="td">75126544</td>
+            <td class="td">Estudiante 1</td>
+            <td class="td">Matemáticas, Computación</td>
+          </tr>
+          <tr>
+            <td class="td">75126544</td>
+            <td class="td">Estudiante 2</td>
+            <td class="td">Ciencias Sociales, Lenguaje</td>
+          </tr>
+          <tr>
+            <td class="td">75126544</td>
+            <td class="td">Estudiante 3</td>
+            <td class="td">Artes, Música</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div> -->
+
+  <section class="inscripcion">
+    <div class="registro-form">
+      <div class="Encabezado">
+        <h1>Agregar del Estudiante</h1>
+      </div>
+      <form class="Inscripción-estudiante">
+        <div class="datos">
+          <label for="dni">DNI del Estudiante:</label>
+          <input type="text" id="dni" name="dni" required autocomplete="off">
+        </div>
+
+        <div class="datos">
+          <label for="nombres">Nombres:</label>
+          <input type="text" id="nombres" name="nombres" required autocomplete="off">
+        </div>
+
+        <div class="datos">
+          <label for="apellido-paterno">Apellido Paterno:</label>
+          <input type="text" id="apellido-paterno" name="apellido-paterno" required autocomplete="off">
+        </div>
+
+        <div class="datos">
+          <label for="apellido-materno">Apellido Materno:</label>
+          <input type="text" id="apellido-materno" name="apellido-materno" required autocomplete="off">
+        </div>
+
+        <div class="datos">
+          <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+          <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required autocomplete="off">
+        </div>
+
+      </form>
+    </div>
+
+    <div class="datos">
+      <button class="registrar-button" type="submit">Registrar</button>
+    </div>
+
+
+
+
+  </section>
+
+  <script>
+    // si da click en el boton agregar estudiante ocultamos la tabla y mostramos el formulario
+    const agregarEstudiante = document.querySelector(".agregar-estudiante");
+    const tableStudent = document.querySelector(".table_student");
+    const inscripcion = document.querySelector(".inscripcion");
+
+    // al iniciar solo mostramos la tabla .table_student
+    tableStudent.style.display = "block";
+    inscripcion.style.display = "none";
+
+    agregarEstudiante.addEventListener("click", () => {
+      tableStudent.style.display = "none";
+      inscripcion.style.display = "block";
+    });
+
+    // si da click en el boton registrar ocultamos el formulario y mostramos la tabla
+    const registrarButton = document.querySelector(".registrar-button");
+
+    registrarButton.addEventListener("click", () => {
+      tableStudent.style.display = "block";
+      inscripcion.style.display = "none";
+    });
+  </script>
+
+</body>
+
 </html>
