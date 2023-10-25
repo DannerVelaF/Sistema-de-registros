@@ -356,3 +356,245 @@ h3{
 
 /************************ PERFIL  ***********************/
 /*****************************************************/
+/************************  Cursos ***********************/
+/*****************************************************/
+
+.cursos-section {
+  
+  border-radius: var(--border-radius);
+  width: 80%;
+  height: 100%;
+  position: absolute;
+}
+
+.cursos-header {
+  font-size: 30px;
+  border-bottom: 2px solid black;
+  background-color: var(--Color_principal);
+  padding: 10px;
+  color:  #F6F1F1;
+}
+
+.cursos-container {
+  position: absolute;
+  width: 100%;
+  background: red;
+}
+.agregar-curso {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  background-color: var(--Color_secundario);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.agregar-curso:hover {
+  background-color: #ada89dcb;
+  color: var(--Color_secundario);
+}
+
+#ver-cursos,
+#agregar-curso {
+  display: none;
+  background-color: #9f9b9b;
+  transition: display 0.2s;
+}
+
+#ver-cursos:hover,
+#agregar-curso:hover {
+  background-color: #cec5c5;
+}
+
+
+/************************   cursos  ***********************/
+/*******************************************************+/
+
+/************************  Ver cursos  ***********************/
+/*******************************************************/
+
+*{
+  
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.table{
+  background-color:#F6F1F1 ;
+   width: 900px;
+  height: 50vh;
+
+
+}
+thead{
+  border-bottom: 2px;
+  margin-bottom: 10px;
+}
+th{
+  padding: 20px 15px;
+  font-weight: 700;
+  
+}
+td{
+  padding: 15px;
+  border-bottom: solid 1px ;
+}
+
+/************************  Ver cursos  ***********************/
+/*************************************************************/
+
+
+/************************ Agregar Curso ***********************/
+/**************************************************************/
+
+*{
+  
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container{
+  width: 80%;
+  height: 70vh;
+  background-color:white ;
+  display: flex;
+  
+
+}
+.form-content{
+  width: 100%;
+  height: 50vh;
+  max-width: 450;
+  background-color:white ;
+  padding: 5px 20px 20px;
+  text-align: center;
+  
+}
+#main-container{
+  margin: 40 auto;
+  width: 400px;
+  height: 50vh;
+  padding: 10px 40px 40px 40px;
+}
+table{
+  background-color: #F6F1F1 ;
+   width: 900px;
+  height: 50vh;
+   
+}
+
+th,td{
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  padding: 20px;
+  border: 0;
+}
+thead{
+  font-size: 8px;
+  margin-bottom: 30px;
+  background-color: #c07f00;
+  color: white;
+  text-align: left;
+  
+}
+
+button {
+  font-size: 20px;
+  margin: 10 px ;
+  position: relative;
+  padding: 20px 30px;
+  border: none;
+  outline: none;
+  background:#c07f00;
+  color:#F6F1F1;
+  cursor: pointer;
+  transition: .5s;
+  overflow: hidden;
+  text-align: right;
+}
+.btn-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  color: #fff;
+ 
+}
+
+button span {
+ 
+  position: absolute;
+  background: #fff;
+  transition: .5s;
+}
+
+button span:nth-child(1) {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: -100%;
+}
+
+button span:nth-child(2) {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  right: -100%;
+}
+
+button span:nth-child(3) {
+  width: 1px;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+}
+
+button span:nth-child(4) {
+  width: 1px;
+  height: 100%;
+  top: -100%;
+  right: 0;
+}
+
+button:hover span:nth-child(1) {
+  left: 0;
+}
+
+button:hover span:nth-child(2) {
+  right: 0;
+}
+
+button:hover span:nth-child(3) {
+  bottom: 0;
+}
+
+button:hover span:nth-child(4){
+top:0;
+}
+/************************ Agregar Curso ***********************/
+/**************************************************************/
+
+
+
+
+
+
