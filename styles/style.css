@@ -56,6 +56,7 @@ main {
 .formulario h1 {
   position: relative;
   left: -120px;
+  font-size: 30px;
   font-weight: 800;
 }
 
@@ -280,7 +281,6 @@ button:hover {
 
 /************************ PERFIL  ***********************/
 /*****************************************************/
-
 .perfil-section {
   width: 70%;
   height: 70%;
@@ -292,7 +292,7 @@ button:hover {
   grid-template-rows: 10% 75% 15%;
 }
 
-h3 {
+.perfil-section h3 {
   background: var(--Color_principal);
   margin: 3 auto;
   color: white;
@@ -301,7 +301,6 @@ h3 {
 }
 
 #contenido {
-  /* background-color: bisque; */
   display: grid;
   grid-template-columns: 50% 50%;
 }
@@ -310,6 +309,7 @@ h3 {
   align-items: center;
   justify-content: center;
 }
+
 .derecha {
   display: flex;
   flex-direction: column;
@@ -580,7 +580,6 @@ button:hover span:nth-child(4) {
   background-color: #f2f2f2;
 }
 
-/* estilos de h1 */
 .title_student {
   text-align: center;
   color: var(--Color_principal);
@@ -589,7 +588,6 @@ button:hover span:nth-child(4) {
   margin-top: 20px;
 }
 
-/*hacemos que el titulo se vea mas grande y con negrita y este centrado arriba de la tabla*/
 .title_student {
   text-align: center;
   color: var(--Color_principal);
