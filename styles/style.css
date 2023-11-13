@@ -32,7 +32,7 @@ main {
 }
 
 .izquierda {
-  background-image: url(/imgs/Logo-colegio.jpg);
+  background-image: url(../imgs/Logo-colegio.jpg);
   background-color: gray;
   background-size: cover;
   background-position: center;
@@ -56,14 +56,17 @@ main {
 .formulario h1 {
   position: relative;
   left: -120px;
+  font-size: 30px;
   font-weight: 800;
+  margin-bottom: 20px;
 }
 
 .formulario .credencial {
   position: relative;
-  margin: 30px 0;
+  margin: 10px 0;
   font-size: 20px;
 }
+
 .credencial input {
   width: 500px;
   padding: 0 6px;
@@ -81,19 +84,26 @@ main {
   left: 30px;
   pointer-events: none;
   background: #fff;
-
   transition: 0.5s;
+}
+
+.inicio_sesion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .formulario .ingresar {
   background-color: var(--Color_principal);
-  width: 400px;
+  width: 80%;
   height: 60px;
   color: #fff;
   font-size: 15px;
   border-radius: var(--border-radius);
   border: 1px var(--Color_secundario) solid;
   cursor: pointer;
+  margin: 20px;
 }
 
 .credencial input:valid ~ label,
@@ -185,6 +195,11 @@ main {
   align-items: center;
 }
 
+.principal iframe {
+  height: 100%;
+  width: 100%;
+}
+
 .contenedor {
   background: var(--Color_principal);
   width: 70%;
@@ -210,6 +225,14 @@ main {
 
 .registro-form {
   margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.registro-form > h1 {
+  text-align: center;
 }
 
 .Inscripción-estudiante {
@@ -260,6 +283,8 @@ button:hover {
 .inscripcion {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .registrar-button {
@@ -275,51 +300,62 @@ button:hover {
   font-size: 20px;
 }
 
+.seccion-registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /************************ Inscripciones  ***********************/
 /*****************************************************/
 
 /************************ PERFIL  ***********************/
 /*****************************************************/
-
 .perfil-section {
   width: 70%;
   height: 70%;
   background-color: #d9d9d9;
-}
-
-.perfil-section {
   display: grid;
   grid-template-rows: 10% 75% 15%;
 }
 
-h3 {
+.perfil-section h3 {
   background: var(--Color_principal);
   margin: 3 auto;
   color: white;
-  max-width: 100%;
-  padding: 10px;
+  padding: 20px;
 }
 
 #contenido {
-  /* background-color: bisque; */
   display: grid;
   grid-template-columns: 50% 50%;
+  margin: 20px 0 20px 0;
 }
+
 #izquierda {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.derecha {
+
+#izquierda article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#derecha {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  font-size: 40px;
+  font-size: 30px;
 }
 
-.derecha > h1 {
-  margin-bottom: 50px;
+#derecha > h1 {
+  margin-bottom: 20px;
 }
 
 #izquierda img {
@@ -327,23 +363,27 @@ h3 {
   position: relative;
 }
 
-.footer-perfil {
+#footer-perfil {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.img1 {
+#footer-perfil img {
   width: 13px;
   height: 13px;
 }
-.img2 {
-  width: 13px;
-  height: 13px;
+.contact {
+  padding: 10px;
 }
-.img3 {
-  width: 13px;
-  height: 13px;
+.contact img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+#footer-perfil h6 {
+  font-size: 15px;
+  padding: 5px 5px 10px 5px;
 }
 
 /************************ PERFIL  ***********************/
@@ -580,7 +620,6 @@ button:hover span:nth-child(4) {
   background-color: #f2f2f2;
 }
 
-/* estilos de h1 */
 .title_student {
   text-align: center;
   color: var(--Color_principal);
@@ -589,7 +628,6 @@ button:hover span:nth-child(4) {
   margin-top: 20px;
 }
 
-/*hacemos que el titulo se vea mas grande y con negrita y este centrado arriba de la tabla*/
 .title_student {
   text-align: center;
   color: var(--Color_principal);
