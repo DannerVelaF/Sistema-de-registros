@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Santo Tomás de Aquino</title>
   <link rel="stylesheet" href="./styles/lading_pages.css" />
-  <!-- web page ico -->
   <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon" />
 </head>
 
@@ -82,8 +81,7 @@
           <section class="redes">
             <div class="redes-sociales">
               <h1>Visitanos en nuestras redes</h1>
-              <a href="https://www.facebook.com/iepsantotomasdeaquino" target="_blank"><img src="./imgs/facebook.png"
-                  alt="facebook" /></a>
+              <a href="https://www.facebook.com/iepsantotomasdeaquino" target="_blank"><img src="./imgs/facebook.png" alt="facebook" /></a>
             </div>
           </section>
         </aside>
@@ -160,10 +158,7 @@
   <!-- Contacto -->
   <section class="contacto" id="contacto">
     <div class="localizacion">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9639401792306!2d-79.83975262403523!3d-6.774243566248585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef290ef8d0e3%3A0x641d80c17c9400a3!2s7%20de%20Enero%20374%2C%20Chiclayo%2014001!5e0!3m2!1ses-419!2spe!4v1699780340148!5m2!1ses-419!2spe"
-        width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9639401792306!2d-79.83975262403523!3d-6.774243566248585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef290ef8d0e3%3A0x641d80c17c9400a3!2s7%20de%20Enero%20374%2C%20Chiclayo%2014001!5e0!3m2!1ses-419!2spe!4v1699780340148!5m2!1ses-419!2spe" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="formulario-contacto">
       <h1>Contactanos</h1>
@@ -190,8 +185,7 @@
         <a href="#niveles-academicos">Niveles Académicos</a>
         <a href="#contacto">Contactanos</a>
       </div>
-      <a href="https://www.facebook.com/iepsantotomasdeaquino" target="_blank"><img class="footer-red"
-          src="./imgs/footer-img.png" alt="facebook" /></a>
+      <a href="https://www.facebook.com/iepsantotomasdeaquino" target="_blank"><img class="footer-red" src="./imgs/footer-img.png" alt="facebook" /></a>
       <h3>&copy; 2023 Santo Tomás de Aquino</h3>
     </div>
   </footer>

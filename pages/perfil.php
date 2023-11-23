@@ -1,5 +1,7 @@
 <?php
-include("../includes/head.php")
+include("../includes/head.php");
+include("../database/db.php");
+
 ?>
 <section class="perfil-section">
   <h3> PERFIL DEL USUARIO </h3>
