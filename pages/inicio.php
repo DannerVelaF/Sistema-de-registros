@@ -1,5 +1,5 @@
 <?php
-  include("../includes/head.php")
+include("../includes/head.php")
 ?>
 <!-- Header -->
 <header>
@@ -9,7 +9,7 @@
         <h1>Sistema de registro de estudiantes</h1>
       </li>
       <li>
-        <img src="/imgs/logo.png" alt="Logo" />
+        <img src="../imgs/logo.png" alt="Logo" />
       </li>
     </ul>
   </nav>
@@ -121,11 +121,11 @@
     <div class="contenedor" id="contenedor">
       <div class="panel">
         <h1>Santo Tomás de Aquino</h1>
-        <img src="/imgs/logo.png" alt="" />
+        <img src="../imgs/logo.png" alt="" />
       </div>
     </div>
   </section>
 </main>
 <?php
-  include("../includes/footer.php")
+include("../includes/footer.php")
 ?>

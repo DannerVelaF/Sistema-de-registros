@@ -1,20 +1,10 @@
-//Declaracion de los elementos a manipular
-
-// const agregar_curso = document.getElementById("agregar-curso");
-// const ver_curso = document.getElementById("ver-cursos");
-
-// function ocultarCursos() {
-//   agregar_curso.style.display = "none";
-//   ver_curso.style.display = "none";
-// }
-
 function mostrarInicio() {
   location.reload();
 }
 
 function mostrarCursos() {
   $.ajax({
-    url: "/pages/cursos.php",
+    url: "../pages/cursos.php",
     success: function (res) {
       $("#principal").html(res);
     },
@@ -27,7 +17,7 @@ function mostrarCursos() {
 
 function mostrar_AgregarCursos() {
   $.ajax({
-    url: "/pages/cursos.php",
+    url: "../pages/cursos.php",
     success: function (res) {
       $("#principal").html(res);
     },
@@ -36,7 +26,7 @@ function mostrar_AgregarCursos() {
 
 function mostrar_VerCursos() {
   $.ajax({
-    url: "/pages/ver_cursos.php",
+    url: "../pages/ver_cursos.php",
     success: function (res) {
       $("#principal").html(res);
     },
@@ -45,7 +35,7 @@ function mostrar_VerCursos() {
 
 function mostrarEstudiantes() {
   $.ajax({
-    url: "/pages/estudiantes.php",
+    url: "../pages/estudiantes.php",
     success: function (res) {
       $("#principal").html(res);
       const agregarEstudiante = document.querySelector(".agregar-estudiante");
@@ -79,7 +69,7 @@ function mostrarEstudiantes() {
 
 function mostrarInscripciones() {
   $.ajax({
-    url: "/pages/incripciones.php",
+    url: "../pages/incripciones.php",
     success: function (res) {
       $("#principal").html(res);
     },
@@ -92,7 +82,7 @@ function mostrarInscripciones() {
 
 function mostrarPerfil() {
   $.ajax({
-    url: "/pages/perfil.php",
+    url: "../pages/perfil.php",
     success: function (res) {
       $("#principal").html(res);
     },

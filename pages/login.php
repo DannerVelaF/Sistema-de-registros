@@ -1,3 +1,7 @@
+<?php include("../database/db.php"); ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +9,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio de sesion</title>
-  <link rel="stylesheet" href="/styles/style.css" />
-  <link rel="shortcut icon" href="/imgs/logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="shortcut icon" href="../imgs/logo.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -15,17 +19,17 @@
     <div class="derecha">
       <div class="formulario">
         <h1>INICIO DE SESIÓN</h1>
-        <form action="" class="inicio_sesion">
+        <form action="../controllers/validar_usuario.php" method="POST" class="inicio_sesion">
           <div class="credencial">
-            <input type="text" id="usuario" class="usuario" autocomplete="off" required />
+            <input type="text" id="usuario" class="usuario" name="usuario" autocomplete="off" required />
             <label for="usuario">Nombre de usuario</label>
           </div>
           <div class="credencial">
-            <input type="password" id="password" class="password" required />
+            <input type="password" id="password" name="password" class="password" required />
             <label for="password">Contraseña</label>
           </div>
+          <input type="submit" value="Acceder" class="ingresar" name="acceder" />
         </form>
-        <input type="submit" value="Acceder" class="ingresar" autocomplete="off" />
       </div>
     </div>
   </div>
