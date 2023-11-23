@@ -36,17 +36,64 @@
             </ul>
       </nav>
     </header>
+
     <section class="panel">
       <div class="panel-secciones">
         <aside class="panel-imagen">
           <img src="./imgs/portada-inicio.jpg" alt="imagen-panel" />
         </aside>
-        <aside class="noticias">asdfas</aside>
+        <aside class="panel-noticias">
+          <section class="section-noticia">
+            <div class="noticia">
+              <img src="./imgs/noticia1.jpg" alt="a" />
+              <div class="texto-noticia">
+                <h1>Anuncio de puestos escolares</h1>
+                <p><a href="#">Mas informacion</a></p>
+              </div>
+            </div>
+            <div class="noticia">
+              <img src="./imgs/noticia2.png" alt="a" />
+              <div class="texto-noticia">
+                <h1>Las Olimpiadas Tomasinas ya están aquí!!</h1>
+                <p><a href="#">Mas informacion</a></p>
+              </div>
+            </div>
+            <div class="noticia">
+              <img src="./imgs/noticia3.jpg" alt="a" />
+              <div class="texto-noticia">
+                <div class="texto-noticias">
+                  <h1>
+                    Ven y vive junto a noostors nuestro 32avo. Aniversario
+                  </h1>
+                  <p><a href="#">Mas informacion</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="noticia">
+              <img src="./imgs/noticia4.jpg" alt="a" />
+              <div class="texto-noticia">
+                <div class="texto-noticias">
+                  <h1>Mañana deportiva con nuestros alumnos</h1>
+                  <p><a href="#">Mas informacion</a></p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="redes">
+            <div class="redes-sociales">
+              <h1>Visitanos en nuestras redes</h1>
+              <a href="https://www.facebook.com/iepsantotomasdeaquino" target="_blank"><img src="./imgs/facebook.png"
+                  alt="facebook" /></a>
+            </div>
+          </section>
+        </aside>
       </div>
       <div class="mas-informacion">
         <a href="#nosotros">MAS INFORMACION</a>
       </div>
     </section>
+  </section>
+
   </section>
 
   <!--Nosotros-->
@@ -66,10 +113,9 @@
         <div class="nosotros-texto">
           <h1>Nuestra Visión</h1>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit
-            ipsam maxime aliquam sint ad porro qui, saepe explicabo quas!
-            Veniam voluptatum eum numquam soluta illum aliquam reprehenderit
-            nihil facere recusandae.
+            "Lograr ser una de las instituciones lideres en la región,
+            brindando una excelente formación a nuestros estudiantes gracias a
+            la eseñanza de nuestros docentes y padres de familia."
           </p>
         </div>
         <div class="nosotros-imagen">
@@ -83,10 +129,9 @@
         <div class="nosotros-texto">
           <h1>Nuestra Misión</h1>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit
-            ipsam maxime aliquam sint ad porro qui, saepe explicabo quas!
-            Veniam voluptatum eum numquam soluta illum aliquam reprehenderit
-            nihil facere recusandae.
+            "Promover una enseñanza innovadoara y valores a nuestros
+            estudiantes con lo cual puedan tomar las mejores opciones para
+            cultivar su futuro prospero y exitoso."
           </p>
         </div>
       </aside>
@@ -115,7 +160,10 @@
   <!-- Contacto -->
   <section class="contacto" id="contacto">
     <div class="localizacion">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9639401792306!2d-79.83975262403523!3d-6.774243566248585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef290ef8d0e3%3A0x641d80c17c9400a3!2s7%20de%20Enero%20374%2C%20Chiclayo%2014001!5e0!3m2!1ses-419!2spe!4v1699780340148!5m2!1ses-419!2spe" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9639401792306!2d-79.83975262403523!3d-6.774243566248585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef290ef8d0e3%3A0x641d80c17c9400a3!2s7%20de%20Enero%20374%2C%20Chiclayo%2014001!5e0!3m2!1ses-419!2spe!4v1699780340148!5m2!1ses-419!2spe"
+        width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="formulario-contacto">
       <h1>Contactanos</h1>
@@ -132,8 +180,19 @@
   <!-- footer -->
   <footer class="footer">
     <div class="footer-contenido">
-      <img src="./imgs/logo.png" alt="" />
-      <h1>"Moralidad, estudio y diciplina"</h1>
+      <div class="footer-inicio">
+        <img src="./imgs/logo.png" alt="" />
+        <h1>"Moralidad, estudio y disciplina"</h1>
+      </div>
+      <div class="footer-enlaces">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#niveles-academicos">Niveles Académicos</a>
+        <a href="#contacto">Contactanos</a>
+      </div>
+      <a href="https://www.facebook.com/iepsantotomasdeaquino" target="_blank"><img class="footer-red"
+          src="./imgs/footer-img.png" alt="facebook" /></a>
+      <h3>&copy; 2023 Santo Tomás de Aquino</h3>
     </div>
   </footer>
 </body>
