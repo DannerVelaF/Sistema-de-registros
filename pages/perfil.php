@@ -2,6 +2,9 @@
 include("../includes/head.php");
 include("../database/db.php");
 
+$query = "SELECT * FROM perfil WHERE usuario = '$_SESSION[usuario]'";
+$result = mysqli_query($conn, $query);
+
 ?>
 <section class="perfil-section">
   <h3> PERFIL DEL USUARIO </h3>
@@ -14,13 +17,25 @@ include("../database/db.php");
     </section>
     <section id="derecha">
       <h1>Información Del Usuario</h1>
+
       <aside>
-        <h1 class="datos">NOMBRES:</h1>
-        <h1 class="datos">CORREO:</h1>
-        <h1 class="datos">TELÉFONO:</h1>
-        <h1 class="datos">OCUPACIÓN:</h1>
-        <h1 class="datos">DOMICILIO:</h1>
+        <?php
+        while ($row = mysqli_fetch_array($result)) {
+
+        ?>
+          <h1 class="datos">NOMBRES:
+            <?php echo $row['nombre_usuario'] . " " . $row["apellido_paternoU"] . " " . $row["apellido_paternoU"] ?>
+          </h1>
+          <h1 class="datos">CORREO: <?php echo $row['email'] ?></h1>
+          <h1 class="datos">TELÉFONO: <?php echo $row['telefono'] ?></h1>
+          <h1 class="datos">OCUPACIÓN: <?php echo $row['cargo'] ?></h1>
+          <h1 class="datos">DOMICILIO: <?php echo $row['direccion'] ?></h1>
+        <?php
+        }
+        ?>
       </aside>
+
+
     </section>
   </section>
   <footer id="footer-perfil">

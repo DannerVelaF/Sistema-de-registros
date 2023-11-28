@@ -49,6 +49,6 @@ include("../includes/head.php")
     </table>
   </div>
 </section>
-</body>
-
-</html>
+<?php
+include("../includes/footer.php");
+?>

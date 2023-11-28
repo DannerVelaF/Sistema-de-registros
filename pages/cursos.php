@@ -40,6 +40,6 @@ include("../includes/head.php")
     </div>
   </form>
 </div>
-</body>
-
-</html>
+<?php
+include("../includes/footer.php");
+?>
