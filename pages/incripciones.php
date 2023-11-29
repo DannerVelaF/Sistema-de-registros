@@ -1,12 +1,13 @@
 <?php
 include("../includes/head.php");
+include("../database/db.php")
 ?>
 <section class="inscripcion">
   <div class="registro-form">
     <div class="Encabezado">
       <h1>Datos del Estudiante</h1>
     </div>
-    <form class="Inscripción-estudiante">
+    <form class="Inscripción-estudiante" id="form1">
       <div class="datos">
         <label for="dni">DNI del Estudiante:</label>
         <input type="text" id="dni" name="dni" required autocomplete="off" onchange="buscarEstudiante(this.value)"
@@ -40,21 +41,25 @@ include("../includes/head.php");
       <h1>Datos del Curso</h1>
     </div>
 
-    <form class="Inscripción-estudiante">
+    <form class="Inscripción-estudiante" id="form2">
       <div class="datos">
-        <label for="id-curso">ID Curso:</label>
-        <input type="text" id="id-curso" name="id-curso" required autocomplete="off" />
-      </div>
-
-      <div class="datos">
-        <label for="nombre-curso">Nombre Curso:</label>
-        <input type="text" id="nombre-curso" name="nombre-curso" required autocomplete="off" />
+        <label for="id-curso">Seleccionar Cursos:</label>
+        <select name="cursos[]" class="seleccionar-cursos" multiple>
+          <?php
+          $query = "SELECT * FROM cursos";
+          $result = mysqli_query($conn, $query);
+          while ($row = mysqli_fetch_array($result)) { ?>
+          <option value="<?php echo $row['id_cursos'] ?>"><?php echo $row['nombre_curso'] ?></option>
+          <?php } ?>
+        </select>
       </div>
     </form>
   </div>
 
   <div class="datos">
-    <button class="registrar-button" type="submit">Registrar</button>
+    <button class="registrar-button" type="submit" placeholder="Registrar" onclick="inscribir()">
+      inscribir
+    </button>
   </div>
 </section>
 <?php
@@ -63,7 +68,7 @@ include("../includes/footer.php");
 <script>
 function buscarEstudiante(dni) {
   $.ajax({
-    url: "../controllers/inscribir_alumno.php",
+    url: "../controllers/buscar_alumno.php",
     type: "POST",
     data: {
       dni: dni
@@ -81,5 +86,21 @@ function buscarEstudiante(dni) {
       $('#fecha-nacimiento').prop('readonly', true);
     }
   });
+}
+
+function inscribir() {
+  var form1 = $("#form1").serialize();
+  var form2 = $("#form2").serialize();
+  var data = form1 + "&" + form2;
+  $.ajax({
+    url: "../controllers/inscribir_alumno.php",
+    type: "POST",
+    data: data,
+    success: function(data) {
+      console.log(data);
+    }
+  });
+
+
 }
 </script>

@@ -1,18 +1,22 @@
 <?php
+
 include("../database/db.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $dni = $_POST["dni"];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $dni = $_POST['dni'];
+  $cursos = $_POST['cursos'];
 
-  $query = "SELECT * FROM estudiantes WHERE id_estudiante = '$dni'";
+  $query = "INSERT INTO inscripciones (id_estudiante, id_cursos, id_usuario) VALUES ";
+  foreach ($cursos as $curso) {
+    $query .= "('$dni', '$curso', '$id_usuario'), ";
+  }
+  $query = rtrim($query, ', ');
 
   $result = mysqli_query($conn, $query);
-  if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    echo json_encode($row);
+
+  if ($result) {
+    echo "Inscripcion exitosa";
   } else {
-    echo json_encode(['error' => '']);
+    echo "Error al inscribir";
   }
 }
-
-$conn->close();

@@ -21,9 +21,9 @@
         <h1>INICIO DE SESIÓN</h1>
 
         <?php if (isset($_SESSION['alerta'])) { ?>
-        <div class="alerta">
-          <p><?php echo $_SESSION['alerta']; ?></p>
-        </div>
+          <div class="alerta">
+            <p><?php echo $_SESSION['alerta']; ?></p>
+          </div>
         <?php
           session_unset();
         }

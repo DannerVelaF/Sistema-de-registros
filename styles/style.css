@@ -577,6 +577,7 @@ button:hover span:nth-child(4) {
 
 /************************ Estudiantes ***********************/
 /**************************************************************/
+
 .thead {
   background-color: var(--Color_principal);
   color: var(--Color_secundario);
@@ -664,4 +665,8 @@ button:hover span:nth-child(4) {
 
 .logo:hover .img-logo {
   transform: scale(1.2);
+}
+.seleccionar-cursos {
+  width: 100%;
+  font-size: 25px;
 }

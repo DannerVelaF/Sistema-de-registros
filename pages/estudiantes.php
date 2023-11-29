@@ -37,8 +37,14 @@ $result = mysqli_query($conn, $query);
             <td class="td">
               <?php echo $row['fecha_nacimiento'] ?>
             </td>
-            <td class="td">
-              <h1>cursos</h1>
+            <td class="td" style="max-width: 300px;">
+              <?php
+              $query = "SELECT cursos.nombre_curso FROM cursos INNER JOIN inscripciones ON cursos.id_cursos = inscripciones.id_cursos WHERE inscripciones.id_estudiante = " . $row['id_estudiante'];
+              $result2 = mysqli_query($conn, $query);
+              while ($row2 = mysqli_fetch_array($result2)) {
+                echo $row2['nombre_curso'] . " ";
+              }
+              ?>
             </td>
             <td class="td ">
               <div class="actions">
