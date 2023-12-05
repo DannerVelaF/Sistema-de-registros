@@ -1,20 +1,7 @@
-
-!<?php
+<?php
 include("../includes/head.php")
 ?>
 
-<script>
-
-  function confirmacion(){
-    var respuesta =confirm("¿Desea agregar esste curso?");
-    if(respuesta == true){
-      return true;
-    }else{
-      return false;
-    }
-  }
-
-  </script>
 
 
 <div class="cursos-container">
@@ -32,30 +19,39 @@ include("../includes/head.php")
           <tr>
             <td>Nombre del curso:</td>
             <td>
-              <input class="data-estudiante" type="text" name="nombre" id="nombre" size="50px" style="font-size: 20px;" />
+              <input class="data-estudiante" type="text" name="nombre" id="nombre" size="50px" style="font-size: 20px;" autocomplete="off" />
             </td>
           </tr>
           <tr>
             <td>Fecha de creación:</td>
             <td>
-              <input class="data-estudiante"  value="<?php echo date('d-m-Y');?>" readonly="readonly" name="fechaHora" id="fechaHora" size="50px" style="font-size: 20px;" />
+              <input class="data-estudiante" value="<?php echo date('d-m-Y'); ?>" readonly="readonly" name="fechaHora" id="fechaHora" size="50px" style="font-size: 20px;" />
             </td>
           </tr>
-           
-          <td colspan="2">
-                      <div class="center">
-                                      
-                               <input type="submit" name="Agregar" value="Agregar" class="styled-button" onclick="return confirmacion()">
 
-                     </div>
-          </td>     
+          <td colspan="2">
+            <div class="center">
+
+              <input type="submit" name="Agregar" value="Agregar" class="styled-button" onclick="return confirmacion()">
+
+            </div>
+          </td>
         </tbody>
       </table>
     </div>
   </form>
 </div>
 
-
+<script>
+  function confirmacion() {
+    var respuesta = confirm("¿Desea agregar esste curso?");
+    if (respuesta == true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+</script>
 
 
 

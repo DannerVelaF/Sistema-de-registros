@@ -11,6 +11,8 @@ if (isset($_POST['usuario']) && $_POST['password']) {
   $result = mysqli_query($conn, $query);
   if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result);
+    $id_usuario = $row['id_usuario'];
+    $_SESSION['id_user'] = $id_usuario;
     if ($_POST['password'] === $row['clave']) {
       header("Location: ../pages/inicio.php");
       exit();

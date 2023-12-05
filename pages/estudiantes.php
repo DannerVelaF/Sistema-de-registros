@@ -4,8 +4,6 @@ include("../database/db.php");
 $query = "SELECT * FROM estudiantes";
 $result = mysqli_query($conn, $query);
 ?>
-
-
 <div class="registro-form table_stu" id='table_stu'>
   <div class="Encabezado">
     <h1>Estudiantes</h1>
@@ -22,7 +20,7 @@ $result = mysqli_query($conn, $query);
         <tr>
           <th class="th">DNI</th>
           <th class="th">Nombre</th>
-          <th class="th">Fecha Nacimiento</th>
+          <th class="th">Edad</th>
           <th class="th">Cursos</th>
           <th class="th">Acciones</th>
         </tr>
@@ -35,14 +33,16 @@ $result = mysqli_query($conn, $query);
               <?php echo $row['nombre_estudiante'] . " " . $row["apellido_paterno"] . " " . $row["apellido_materno"] ?>
             </td>
             <td class="td">
-              <?php echo $row['fecha_nacimiento'] ?>
+              <?php
+              echo date("Y") - date("Y", strtotime($row['fecha_nacimiento'])) . " años";
+              ?>
             </td>
             <td class="td" style="max-width: 300px;">
               <?php
               $query = "SELECT cursos.nombre_curso FROM cursos INNER JOIN inscripciones ON cursos.id_cursos = inscripciones.id_cursos WHERE inscripciones.id_estudiante = " . $row['id_estudiante'];
               $result2 = mysqli_query($conn, $query);
               while ($row2 = mysqli_fetch_array($result2)) {
-                echo $row2['nombre_curso'] . " ";
+                echo  $row2['nombre_curso'] . " | ";
               }
               ?>
             </td>

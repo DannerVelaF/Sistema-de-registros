@@ -12,27 +12,39 @@
 <body>
   <section class="inicio" id="inicio">
     <header class="header">
+      <!-- Barra de navegacion -->
+
       <nav class="nav-bar">
         <div class="logo">
-          <a href="index.html"><img src="./imgs/logo.png" alt="logo" " /></a>
-            <h1>Santo Tomás de Aquino</h1>
-          </div>
-          <ul class=" nav-bar-items">
-            <li>
-              <a class="items" href="#inicio">INICIO</a>
-            </li>
-            <li>
-              <a class="items" href="#nosotros">NOSOTROS</a>
-            </li>
-            <li>
-              <a class="items" href="#niveles-academicos">NIVELES ACADÉMICOS</a>
-            </li>
-            <li>
-              <a class="items" href="#contacto">CONTACTANOS</a>
-            </li>
-
-            <a class="btn-registro" href="/Sistema de registros//pages/login.php">IR AL REGISTRO</a>
-            </ul>
+          <a href="index.html"><img src="./imgs/logo.png" alt="logo" /></a>
+          <h1>Santo Tomás de Aquino</h1>
+        </div>
+        <ul class="nav-bar-items" id='navbar'>
+          <!-- Menu responsive cancel -->
+          <svg class="menu cancel" id='cancel' xmlns="http://www.w3.org/2000/svg" height="35" width="35"
+            viewBox="0 0 384 512">
+            <path fill="#ffff"
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+          </svg>
+          <li>
+            <a class="items" href="#inicio">INICIO</a>
+          </li>
+          <li>
+            <a class="items" href="#nosotros">NOSOTROS</a>
+          </li>
+          <li>
+            <a class="items" href="#niveles-academicos">NIVELES ACADÉMICOS</a>
+          </li>
+          <li>
+            <a class="items" href="#contacto">CONTACTANOS</a>
+          </li>
+          <a class="btn-registro" href="/Sistema de registros//pages/login.php">IR AL REGISTRO</a>
+        </ul>
+        <!-- Menu responsive bars -->
+        <svg class="menu bars" xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 448 512">
+          <path fill="#ffff"
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+        </svg>
       </nav>
     </header>
 
@@ -81,7 +93,8 @@
           <section class="redes">
             <div class="redes-sociales">
               <h1>Visitanos en nuestras redes</h1>
-              <a href="https://www.facebook.com/iepsantotomasdeaquino" target="_blank"><img src="./imgs/facebook.png" alt="facebook" /></a>
+              <a href="https://www.facebook.com/iepsantotomasdeaquino" target="_blank"><img src="./imgs/facebook.png"
+                  alt="facebook" /></a>
             </div>
           </section>
         </aside>
@@ -90,8 +103,6 @@
         <a href="#nosotros">MAS INFORMACION</a>
       </div>
     </section>
-  </section>
-
   </section>
 
   <!--Nosotros-->
@@ -158,7 +169,10 @@
   <!-- Contacto -->
   <section class="contacto" id="contacto">
     <div class="localizacion">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9639401792306!2d-79.83975262403523!3d-6.774243566248585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef290ef8d0e3%3A0x641d80c17c9400a3!2s7%20de%20Enero%20374%2C%20Chiclayo%2014001!5e0!3m2!1ses-419!2spe!4v1699780340148!5m2!1ses-419!2spe" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9639401792306!2d-79.83975262403523!3d-6.774243566248585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef290ef8d0e3%3A0x641d80c17c9400a3!2s7%20de%20Enero%20374%2C%20Chiclayo%2014001!5e0!3m2!1ses-419!2spe!4v1699780340148!5m2!1ses-419!2spe"
+        width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="formulario-contacto">
       <h1>Contactanos</h1>
@@ -185,10 +199,29 @@
         <a href="#niveles-academicos">Niveles Académicos</a>
         <a href="#contacto">Contactanos</a>
       </div>
-      <a href="https://www.facebook.com/iepsantotomasdeaquino" target="_blank"><img class="footer-red" src="./imgs/footer-img.png" alt="facebook" /></a>
+      <a href="https://www.facebook.com/iepsantotomasdeaquino" target="_blank"><img class="footer-red"
+          src="./imgs/footer-img.png" alt="facebook" /></a>
       <h3>&copy; 2023 Santo Tomás de Aquino</h3>
     </div>
   </footer>
 </body>
+
+<script>
+const navbar = document.getElementById("navbar")
+document.querySelector(".bars").addEventListener('click', () => {
+  navbar.style.left = '0'
+})
+
+document.querySelector('.cancel').addEventListener('click', () => {
+  navbar.style.left = '-600px'
+})
+
+document.querySelectorAll(".items").forEach(element => {
+  element.addEventListener("click", () => {
+    navbar.style.left = '-600px'
+  })
+});
+</script>
+
 
 </html>

@@ -21,15 +21,13 @@
         <h1>INICIO DE SESIÓN</h1>
 
         <?php if (isset($_SESSION['alerta'])) { ?>
-          <div class="alerta">
-            <p><?php echo $_SESSION['alerta']; ?></p>
-          </div>
+        <div class="alerta">
+          <p><?php echo $_SESSION['alerta']; ?></p>
+        </div>
         <?php
           session_unset();
         }
         ?>
-
-
         <form action="../controllers/validar_usuario.php" method="POST" class="inicio_sesion">
           <div class="credencial">
             <input type="text" id="usuario" class="usuario" name="usuario" autocomplete="off" required />

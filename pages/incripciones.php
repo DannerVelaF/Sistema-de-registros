@@ -10,8 +10,7 @@ include("../database/db.php")
     <form class="Inscripción-estudiante" id="form1">
       <div class="datos">
         <label for="dni">DNI del Estudiante:</label>
-        <input type="text" id="dni" name="dni" required autocomplete="off" onchange="buscarEstudiante(this.value)"
-          maxlength="8" />
+        <input type="text" id="dni" name="dni" required autocomplete="off" onchange="buscarEstudiante(this.value)" maxlength="8" />
       </div>
 
       <div class="datos">
@@ -49,7 +48,7 @@ include("../database/db.php")
           $query = "SELECT * FROM cursos";
           $result = mysqli_query($conn, $query);
           while ($row = mysqli_fetch_array($result)) { ?>
-          <option value="<?php echo $row['id_cursos'] ?>"><?php echo $row['nombre_curso'] ?></option>
+            <option value="<?php echo $row['id_cursos'] ?>"><?php echo $row['nombre_curso'] ?></option>
           <?php } ?>
         </select>
       </div>
@@ -66,41 +65,42 @@ include("../database/db.php")
 include("../includes/footer.php");
 ?>
 <script>
-function buscarEstudiante(dni) {
-  $.ajax({
-    url: "../controllers/buscar_alumno.php",
-    type: "POST",
-    data: {
-      dni: dni
-    },
-    dataType: "json",
-    success: function(data) {
-      $("#nombres").val(data.nombre_estudiante);
-      $("#apellido-paterno").val(data.apellido_paterno);
-      $("#apellido-materno").val(data.apellido_materno);
-      $("#fecha-nacimiento").val(data.fecha_nacimiento);
+  function buscarEstudiante(dni) {
+    $.ajax({
+      url: "../controllers/buscar_alumno.php",
+      type: "POST",
+      data: {
+        dni: dni
+      },
+      dataType: "json",
+      success: function(data) {
+        console.log(data);
+        $("#nombres").val(data.nombre_estudiante);
+        $("#apellido-paterno").val(data.apellido_paterno);
+        $("#apellido-materno").val(data.apellido_materno);
+        $("#fecha-nacimiento").val(data.fecha_nacimiento);
 
-      $('#nombres').prop('readonly', true);
-      $('#apellido-paterno').prop('readonly', true);
-      $('#apellido-materno').prop('readonly', true);
-      $('#fecha-nacimiento').prop('readonly', true);
-    }
-  });
-}
+        $('#nombres').prop('readonly', true);
+        $('#apellido-paterno').prop('readonly', true);
+        $('#apellido-materno').prop('readonly', true);
+        $('#fecha-nacimiento').prop('readonly', true);
+      }
+    });
+  }
 
-function inscribir() {
-  var form1 = $("#form1").serialize();
-  var form2 = $("#form2").serialize();
-  var data = form1 + "&" + form2;
-  $.ajax({
-    url: "../controllers/inscribir_alumno.php",
-    type: "POST",
-    data: data,
-    success: function(data) {
-      console.log(data);
-    }
-  });
+  function inscribir() {
+    var form1 = $("#form1").serialize();
+    var form2 = $("#form2").serialize();
+    var data = form1 + "&" + form2;
+    $.ajax({
+      url: "../controllers/inscribir_alumno.php",
+      type: "POST",
+      data: data,
+      success: function(data) {
+        alert(data);
+      }
+    });
 
 
-}
+  }
 </script>

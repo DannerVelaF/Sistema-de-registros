@@ -24,7 +24,7 @@ $result = mysqli_query($conn, $query);
 
         ?>
           <h1 class="datos">NOMBRES:
-            <?php echo $row['nombre_usuario'] . " " . $row["apellido_paternoU"] . " " . $row["apellido_paternoU"] ?>
+            <?php echo $row['nombre_usuario'] . " " . $row["apellido_paternoU"] . " " . $row["apellido_maternoU"] ?>
           </h1>
           <h1 class="datos">CORREO: <?php echo $row['email'] ?></h1>
           <h1 class="datos">TELÉFONO: <?php echo $row['telefono'] ?></h1>

@@ -388,7 +388,7 @@ button:hover {
 
 .cursos-header {
   width: 100%;
-  border:2px solid black;
+  border: 2px solid black;
   font-size: 30px;
   border-bottom: 2px solid black;
   background-color: var(--Color_principal);
@@ -584,6 +584,16 @@ thead {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.agregar-estudiante {
+  background-color: #c07f00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 /**************************************************************/
