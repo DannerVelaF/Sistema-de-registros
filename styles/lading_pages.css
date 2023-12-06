@@ -19,6 +19,7 @@
 
 body {
   font-family: var(--fuente_principal);
+  background-color: #f7f7f7;
 }
 
 li {
@@ -437,12 +438,22 @@ a {
 .formulario-contacto {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+}
+
+.formulario-titulo {
+  width: 75%;
+  height: 50px;
   position: relative;
+  display: inline-block;
+}
+.formulario-container {
+  width: 75%;
+  height: 50%;
 }
 
 .formulario {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -450,7 +461,7 @@ a {
 }
 
 .formulario input {
-  width: 70%;
+  width: 100%;
   height: 50px;
   margin: 20px;
   padding: 20px;
@@ -458,8 +469,8 @@ a {
 }
 
 .formulario-contacto h1 {
-  left: 140px;
-  top: 200px;
+  left: 0;
+  top: 0;
   position: absolute;
   text-transform: uppercase;
   font-size: 2rem;
@@ -491,7 +502,7 @@ a {
 .footer {
   background-color: #0f0f0f;
   color: var(--color-letras);
-  height: 30vh;
+  height: 40vh;
 }
 
 .footer-contenido {
@@ -545,7 +556,12 @@ a {
 
 /** DISPOSITIVOS DE ESCRITORIO **/
 
-@media screen and (max-width: 1500px) {
+@media screen and (min-width: 1281px) {
+  #nosotros {
+    height: 170vh;
+    margin-top: 50px;
+  }
+
   .logo {
     font-size: 16px;
   }
@@ -594,8 +610,8 @@ a {
     font-size: 40px;
   }
   .formulario-contacto h1 {
-    left: 100px;
-    top: 80px;
+    left: 0;
+    top: 0;
     position: absolute;
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -616,6 +632,17 @@ a {
 
   .contacto {
     padding-top: 110px;
+  }
+
+  .formulario-titulo {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: inline-block;
+  }
+  .formulario-container {
+    width: 75%;
+    height: 50%;
   }
 }
 
@@ -719,9 +746,12 @@ a {
   }
 
   .formulario-contacto h1 {
-    left: 60px;
-    top: 290px;
+    left: 0;
+    top: 0;
     font-size: 20px;
+  }
+  .logo {
+    font-size: 16px;
   }
 }
 
