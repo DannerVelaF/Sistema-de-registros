@@ -21,7 +21,7 @@ CREATE TABLE `estudiantes` (
 
 
 INSERT INTO `estudiantes` (`id_estudiante`, `nombre_estudiante`, `apellido_paterno`, `apellido_materno`, `fecha_nacimiento`) VALUES
-(73800659, 'Danner', 'Vela', 'Fuentes', '2004-03-05');
+(75807659, 'David', 'Herrera', 'Fernandez', '2004-03-05');
 
 
 CREATE TABLE `inscripciones` (
