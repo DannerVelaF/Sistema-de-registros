@@ -7,7 +7,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `cursos` (
   `id_cursos` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_curso` varchar(255) DEFAULT NULL,
-  `fecha_creacion` timestamp NULL DEFAULT current_timestamp()
+  `fecha_creacion`  varchar(255) DEFAULT NULL,
+  PRIMARY KEY(id_cursos)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `estudiantes` (
@@ -25,9 +26,9 @@ INSERT INTO `estudiantes` (`id_estudiante`, `nombre_estudiante`, `apellido_pater
 
 CREATE TABLE `inscripciones` (
   `id_inscripcion` int(11) NOT NULL,
-  `id_estudiante` int(11) DEFAULT NULL,
-  `id_cursos` int(11) DEFAULT NULL,
-  `id_usuario` int(11) DEFAULT NULL,
+  `id_estudiante` int(11) NOT NULL,
+  `id_cursos` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
   `fecha_inscripcion` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
