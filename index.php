@@ -36,7 +36,9 @@
           <li>
             <a class="items" href="#contacto">CONTACTANOS</a>
           </li>
-          <a class="btn-registro" href="/Sistema de registros//pages/login.php">IR AL REGISTRO</a>
+          <li class="btn-li">
+            <a class="btn-registro" href="/Sistema de registros//pages/login.php">IR AL REGISTRO</a>
+          </li>
         </ul>
         <!-- Menu responsive bars -->
         <svg class="menu bars" xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 448 512">
