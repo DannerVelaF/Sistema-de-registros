@@ -3,7 +3,6 @@ include("../includes/head.php")
 ?>
 
 
-
 <div class="cursos-container">
   <form action="../controllers/agregar_curso.php" method="POST">
     <div id="main-container">
@@ -19,13 +18,15 @@ include("../includes/head.php")
           <tr>
             <td>Nombre del curso:</td>
             <td>
-              <input class="data-estudiante" type="text" name="nombre" id="nombre" size="50px" style="font-size: 20px;" autocomplete="off" />
+              <input class="data-estudiante" type="text" name="nombre" id="nombre" size="50px" style="font-size: 20px;"
+                autocomplete="off" />
             </td>
           </tr>
           <tr>
             <td>Fecha de creación:</td>
             <td>
-              <input class="data-estudiante" value="<?php echo date('d-m-Y'); ?>" readonly="readonly" name="fechaHora" id="fechaHora" size="50px" style="font-size: 20px;" />
+              <input class="data-estudiante" value="<?php echo date('d-m-Y'); ?>" readonly="readonly" name="fechaHora"
+                id="fechaHora" size="50px" style="font-size: 20px;" />
             </td>
           </tr>
 
@@ -43,14 +44,14 @@ include("../includes/head.php")
 </div>
 
 <script>
-  function confirmacion() {
-    var respuesta = confirm("¿Desea agregar esste curso?");
-    if (respuesta == true) {
-      return true;
-    } else {
-      return false;
-    }
+function confirmacion() {
+  var respuesta = confirm("¿Desea agregar esste curso?");
+  if (respuesta == true) {
+    return true;
+  } else {
+    return false;
   }
+}
 </script>
 
 

@@ -212,12 +212,12 @@
   })
 
   document.querySelector('.cancel').addEventListener('click', () => {
-    navbar.style.left = '-600px'
+    navbar.style.left = '-1000px'
   })
 
   document.querySelectorAll(".items").forEach(element => {
     element.addEventListener("click", () => {
-      navbar.style.left = '-600px'
+      navbar.style.left = '-1000px'
     })
   });
 </script>
